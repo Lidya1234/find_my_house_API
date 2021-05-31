@@ -12,3 +12,4 @@ House4 = House.create(name: "Room", rank: 5,price: "4000", image: "https://res.c
 
 User1 = User.create(username: "Lidu", password: "1234567")
 User2 = User.create(username: "Lidya", password: "1234567")
+User3 = User.create(username: "lidu@gmail.com", password: "lidu43")
