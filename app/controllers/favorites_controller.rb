@@ -1,7 +1,7 @@
 class FavoritesController < ApplicationController
     def index 
-        @user=User.find(params[:user_id])
-        @favorites = @user.favorites
+        @house=House.find(params[:house_id])
+        @favorites = @house.favorites
         # @favorites = Favorite.all
         render json: {status: 'SUCCESS', message: 'Loaded favorites', data: @favorites},status: :ok
     end
