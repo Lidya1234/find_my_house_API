@@ -1,6 +1,8 @@
 class FavoritesController < ApplicationController
     def index 
-        @favorites = Favorite.all
+        @user=User.find(params[:user_id])
+        @favorites = @user.favorites
+        # @favorites = Favorite.all
         render json: {status: 'SUCCESS', message: 'Loaded favorites', data: @favorites},status: :ok
     end
     def show
@@ -30,7 +32,7 @@ class FavoritesController < ApplicationController
     end
     private
     def favorite_params
-        # params.permit(:user_id, :house_id)
+       
         params.require(:favorite).permit(:user_id, :house_id)
     end
 end
