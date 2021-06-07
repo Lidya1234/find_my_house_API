@@ -1,5 +1,11 @@
-if Rails.env === 'production' 
+# if Rails.env === 'production' 
+#     Rails.application.config.session_store :cookie_store, key: '_find_my_house_API', domain: 'find_my_house_API-json-api'
+#   else
+#     Rails.application.config.session_store :cookie_store, key: '_find_my_house_API'
+#   end    
+
+  if Rails.env === 'production' 
     Rails.application.config.session_store :cookie_store, key: '_find_my_house_API', domain: 'find_my_house_API-json-api'
   else
-    Rails.application.config.session_store :cookie_store, key: '_find_my_house_API'
+    Rails.application.config.session_store :cookie_store, key: '__find_my_house_API'
   end    
