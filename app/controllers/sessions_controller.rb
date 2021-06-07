@@ -21,7 +21,10 @@ def is_logged_in?
         logged_in: true,
         user: current_user
       }
+
     else
+      puts logged_in?
+      puts current_user
       render json: {
         logged_in: false,
         message: 'no such user'
