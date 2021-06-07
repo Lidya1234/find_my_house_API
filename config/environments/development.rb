@@ -1,3 +1,36 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@Lidya1234 
+Lidya1234
+/
+find_my_house_API
+1
+00
+Code
+Issues
+1
+Pull requests
+1
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+find_my_house_API/config/environments/development.rb /
+@Lidya1234
+Lidya1234 Initial commit
+Latest commit f41b5ca 21 days ago
+ History
+ 1 contributor
+52 lines (38 sloc)  1.8 KB
+  
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -49,5 +82,5 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end
+
