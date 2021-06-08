@@ -16,7 +16,7 @@ gem 'rack-cors'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 gem 'rails_12factor', group: :production
 gem 'rake'
-
+gem 'rubocop'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
@@ -27,9 +27,8 @@ gem 'rake'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-#gem 'rack-cors'
+# gem 'rack-cors'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
