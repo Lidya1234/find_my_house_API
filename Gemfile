@@ -5,6 +5,9 @@ ruby '2.7.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'bcrypt'
+
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -13,13 +16,6 @@ gem 'rack-cors'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 gem 'rails_12factor', group: :production
 gem 'rake'
-
-
-
-
-
-
-
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
@@ -31,8 +27,6 @@ gem 'rake'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-# Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.2', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 #gem 'rack-cors'
