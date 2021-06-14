@@ -17,7 +17,6 @@ class SessionsController < ApplicationController
     end
   end
   # rubocop:enable Style/SafeNavigation
-  # rubocop:disable Naming/PredicateName
 
   def is_logged_in?
     if logged_in? && current_user
