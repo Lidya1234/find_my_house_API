@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
   def create
     @user = User.find_by(username: session_params[:username])
+    # rubocop:disable Style/SafeNavigation
 
     if @user && @user.authenticate(session_params[:password])
       login!
@@ -15,6 +16,8 @@ class SessionsController < ApplicationController
       }
     end
   end
+  # rubocop:enable Style/SafeNavigation
+  # rubocop:disable Naming/PredicateName
 
   def is_logged_in?
     if logged_in? && current_user
@@ -29,6 +32,7 @@ class SessionsController < ApplicationController
       }
     end
   end
+  # rubocop:enable Naming/PredicateName
 
   def destroy
     logout!

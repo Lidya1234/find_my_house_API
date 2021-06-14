@@ -19,7 +19,7 @@ describe 'House API', type: :request do
       expect(JSON.parse(response.body).size).to eq(3)
     end
   end
-
+  # rubocop:disable Style/BlockDelimiters
   describe 'POST /houses' do
     it 'creates a house' do
       expect {
@@ -36,3 +36,4 @@ describe 'House API', type: :request do
     end
   end
 end
+# rubocop:enable Style/BlockDelimiters
