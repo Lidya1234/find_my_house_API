@@ -3,8 +3,6 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 House1 = House.create(name: "Villa", rank: 4,price: "2000", image: "https://res.cloudinary.com/lidu4394/image/upload/v1621343540/vu-anh-TiVPTYCG_3E-unsplash_1_gqha0y.jpg", description: "Citadel Apartments boasts manicured landscaping and an ample amenity package. Parking is comprised of 44 total spaces, half of which are covered garages while the other half are lined surface spots. The property entrance is magnificently marked with a new wood trellis and cement walkway. 
 ")
 House2 = House.create(name: "Palace", rank: 5,price: "3000", image: "https://res.cloudinary.com/lidu4394/image/upload/v1621343503/terrah-holly-pmhdkgRCbtE-unsplash_wjvpgq.jpg", description: "Wake up refreshed in the elegant four-poster bed ata zen abode located in the rear of the home with views of the garden ,koi pond, and seasonal skyline.Private French door entrance opens to the spacious outdoor deck.")
