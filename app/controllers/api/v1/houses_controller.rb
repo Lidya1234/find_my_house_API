@@ -26,6 +26,7 @@ module Api
         @house.destroy
         render json: { status: 'SUCCESS', message: 'Deleted house', data: @house }, status: :ok
       end
+
       private
 
       def house_params

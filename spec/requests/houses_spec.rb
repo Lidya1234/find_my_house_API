@@ -36,15 +36,15 @@ describe 'House API', type: :request do
     end
   end
   describe 'Delete /house/:id' do
-  it 'deletes a house' do
-    house = FactoryBot.create(:house, name: 'Apartment', rank: 3, price: '3500',
-      image: 'https://res.cloudinary.com/lidu4394/image/upload/v1621517741/digital-marketing-agency-ntwrk-g39p1kDjvSY-unsplash_xqmtzj.jpg',
-      description: 'Enjoy the amazing in-town neighbourhood
+    it 'deletes a house' do
+      house = FactoryBot.create(:house, name: 'Apartment', rank: 3, price: '3500',
+                                        image: 'https://res.cloudinary.com/lidu4394/image/upload/v1621517741/digital-marketing-agency-ntwrk-g39p1kDjvSY-unsplash_xqmtzj.jpg',
+                                        description: 'Enjoy the amazing in-town neighbourhood
       of Atlanta where you can eat and shop!
        Come home to sleep in our dogs-allowed two bedroom home!')
-       delete "/api/v1/houses/#{house.id}"
-       expect(response).to have_http_status(:success)
+      delete "/api/v1/houses/#{house.id}"
+      expect(response).to have_http_status(:success)
+    end
   end
-end
 end
 # rubocop:enable Style/BlockDelimiters
