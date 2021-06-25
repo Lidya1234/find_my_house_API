@@ -25,16 +25,6 @@ class FavoritesController < ApplicationController
     render json: { status: 'SUCCESS', message: 'Deleted favorite', data: @favorite }, status: :ok
   end
 
-  def update
-    @favorite = Favorite.find(params[:id])
-    if @favorite.update_attributes(favorite_params)
-      render json: { status: 'SUCCESS', message: 'Updated favorite', data: @favorite }, status: :ok
-    else
-      render json: { status: 'ERROR', message: 'favorite not saved', data: @favorite.errors },
-             status: :unprocessable_entry
-    end
-  end
-
   private
 
   def favorite_params
