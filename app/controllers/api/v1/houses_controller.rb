@@ -26,21 +26,9 @@ module Api
         @house.destroy
         render json: { status: 'SUCCESS', message: 'Deleted house', data: @house }, status: :ok
       end
-
-      def update
-        @house = House.find(params[:id])
-        if @house.update_attributes(house_params)
-          render json: { status: 'SUCCESS', message: 'Updated house', data: @house }, status: :ok
-        else
-          render json: { status: 'ERROR', message: 'house not saved', data: @house.errors },
-                 status: :unprocessable_entry
-        end
-      end
-
       private
 
       def house_params
-        # params.permit(:name, :rank, :image, :price, :decription)
         params.require(:house).permit(:name, :rank, :image, :price, :decription)
       end
     end
