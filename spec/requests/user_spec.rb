@@ -11,7 +11,7 @@ describe 'User API', type: :request do
 
   describe 'POST /users' do
     it 'creates a user' do
-  post '/users', params: { user: { username: 'Raily', password: '1234567' } } 
+      post '/users', params: { user: { username: 'Raily', password: '1234567' } }
       expect(response).to have_http_status(:success)
     end
   end

@@ -1,18 +1,22 @@
-# rubocop:disable Lint/EmptyBlock
+# rubocop:disable Style/BlockDelimiters
 FactoryBot.define do
   factory :house do
-    name {'Apartment'}
-    rank { 3 } 
-    price {'3500'}
-    image {'https://res.cloudinary.com/lidu4394/image/upload/v1621517741/digital-marketing-agency-ntwrk-g39p1kDjvSY-unsplash_xqmtzj.jpg'}
-    description {'Enjoy the amazing in-town neighbourhood
+    name { 'Apartment' }
+    rank { 3 }
+    price { '3500' }
+    image {
+      'https://res.cloudinary.com/lidu4394/image/upload/v1621517741/digital-marketing-agency-ntwrk-g39p1kDjvSY-unsplash_xqmtzj.jpg'
+    }
+    description {
+      'Enjoy the amazing in-town neighbourhood
       of Atlanta where you can eat and shop!
-       Come home to sleep in our dogs-allowed two bedroom home!'}
+       Come home to sleep in our dogs-allowed two bedroom home!'
+    }
   end
 
   factory :user do
     username { Faker::Internet.email }
-    password {'1234567'}
+    password { '1234567' }
   end
 
   factory :favorite do
@@ -20,4 +24,4 @@ FactoryBot.define do
     house
   end
 end
-# rubocop:enable Lint/EmptyBlock
+# rubocop:enable Style/BlockDelimiters

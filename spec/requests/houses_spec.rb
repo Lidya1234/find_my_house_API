@@ -19,16 +19,16 @@ describe 'House API', type: :request do
       expect(JSON.parse(response.body).size).to eq(3)
     end
   end
-  # rubocop:disable Style/BlockDelimiters
+
   describe 'POST /houses' do
     it 'creates a house' do
-        post '/api/v1/houses',
-             params: { house: { name: 'Apartment', rank: 3, price: '3500',
-                                image: 'https://res.cloudinary.com/lidu4394/image/upload/v1621517741/digital-marketing-agency-ntwrk-g39p1kDjvSY-unsplash_xqmtzj.jpg',
-                                description: 'Enjoy the amazing in-town neighbourhood
+      post '/api/v1/houses',
+           params: { house: { name: 'Apartment', rank: 3, price: '3500',
+                              image: 'https://res.cloudinary.com/lidu4394/image/upload/v1621517741/digital-marketing-agency-ntwrk-g39p1kDjvSY-unsplash_xqmtzj.jpg',
+                              description: 'Enjoy the amazing in-town neighbourhood
                                 of Atlanta where you can eat and shop! Come home
                                 to sleep in our dogs-allowed two bedroom home!' } }
-      
+
       expect(response).to have_http_status(:success)
     end
   end
@@ -44,4 +44,3 @@ describe 'House API', type: :request do
     end
   end
 end
-# rubocop:enable Style/BlockDelimiters
