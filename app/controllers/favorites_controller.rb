@@ -1,0 +1,33 @@
+class FavoritesController < ApplicationController
+  def index
+    @favorites = Favorite.all
+    render json: { status: 'SUCCESS', message: 'Loaded favorites', data: @favorites }, status: :ok
+  end
+
+  def show
+    @favorite = Favorite.find(params[:id])
+    render json: { status: 'SUCCESS', message: 'Loaded favorite', data: @favorite }, status: :ok
+  end
+
+  def create
+    @favorite = Favorite.new(favorite_params)
+    if @favorite.save
+      render json: { status: 'SUCCESS', message: 'Saved favorite', data: @favorite }, status: :ok
+    else
+      render json: { status: 'ERROR', message: 'favorite not saved', data: @favorite.errors },
+             status: :unprocessable_entry
+    end
+  end
+
+  def destroy
+    @favorite = Favorite.find_by(params[:house_id])
+    @favorite.destroy
+    render json: { status: 'SUCCESS', message: 'Deleted favorite', data: @favorite }, status: :ok
+  end
+
+  private
+
+  def favorite_params
+    params.require(:favorite).permit(:user_id, :house_id)
+  end
+end
