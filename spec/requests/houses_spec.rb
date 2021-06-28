@@ -1,7 +1,7 @@
 require 'rails_helper'
 describe 'House API', type: :request do
   describe 'GET /houses' do
-    it 'returns all houses' do
+    it 'Returns all houses' do
       FactoryBot.create(:house, name: 'Room', rank: 5, price: '4000',
                                 image: 'https://res.cloudinary.com/lidu4394/image/upload/v1621517709/webaliser-_TPTXZd9mOo-unsplash_evrcy2.jpg',
                                 description: 'Majestic views from Mount Soledad to Sea

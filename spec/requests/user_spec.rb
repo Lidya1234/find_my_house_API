@@ -3,7 +3,7 @@ describe 'User API', type: :request do
   let!(:users) { create_list(:user, 1) }
   describe 'GET /user' do
     before { get '/users' }
-    it 'returns all user' do
+    it 'returns all users' do
       expect(response).to have_http_status(:success)
       expect(JSON.parse(response.body).size).to eq(1)
     end
